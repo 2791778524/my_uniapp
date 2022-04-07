@@ -7,7 +7,16 @@
         <p class="main">我的</p>
       </header>
       <main>
-        {{ title }}
+        <scroll-view scroll-x="true">
+          <ul>
+            <li>列表一</li>
+            <li>列表二</li>
+            <li>列表三</li>
+            <li>列表四</li>
+            <li>列表五</li>
+            <li>列表六</li>
+          </ul>
+        </scroll-view>
       </main>
     </view>
   </view>
@@ -25,9 +34,7 @@ export default {
       location.href = "http://baidu.com";
     },
   },
-  onLoad() {
-    console.log(uni.getSystemInfoSync().statusBarHeight);
-  },
+  
 };
 </script>
 
@@ -54,5 +61,19 @@ export default {
 #content header .main {
   width: 100rpx;
   text-align: center;
+}
+.animate__animated.animate__backInLeft{
+  --animate-duration: 2s;
+}
+ul{
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+li{
+  float: left;
+  width: 100px;
+  height: 40px;
+  list-style: none;
 }
 </style>
