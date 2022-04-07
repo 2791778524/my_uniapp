@@ -7,7 +7,7 @@
           <p class="main">我的</p>
         </header>
         <main>
-
+          
         </main>
       </view>
   </view>
@@ -25,19 +25,18 @@ export default {
 
 <style>
 #content header{
-  font-size: 3.5vw;
+  font-size: 28rpx;
   text-align: center;
   background: #bbb;
   color: #000;
-  height: 5vh;
-  line-height: 5vh;
+  height: 80rpx;
+  line-height: 80rpx;
   display: flex;
   justify-content: space-between;
 }
-#content header .gobaack{
-  width: 2vw;
+#content header .goback{
+  width: 60rpx;
   text-align: center;
-  font-weight: bold;
 }
 #content header .center{
   position: absolute;
@@ -45,7 +44,7 @@ export default {
   text-align: center;
 }
 #content header .main{
-  width: 10vw;
+  width: 100rpx;
   text-align: center;
 }
 </style>
