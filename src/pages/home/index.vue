@@ -67,7 +67,7 @@ export default {
 }
 ul{
   overflow: hidden;
-  width: 100%;
+  width: 600px;
   white-space: nowrap;
 }
 li{
