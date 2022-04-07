@@ -1,30 +1,38 @@
 <template>
   <view id="container">
-      <view id="content">
-        <header>
-          <p class="goback" @click="goBaidu">&lt;</p>
-          <p class="center">Hello UniApp</p>
-          <p class="main">我的</p>
-        </header>
-        <main>
-          
-        </main>
-      </view>
+    <view id="content">
+      <header>
+        <p class="goback" @click="goBaidu">&lt;</p>
+        <p class="center">Hello UniApp</p>
+        <p class="main">我的</p>
+      </header>
+      <main>
+        {{ title }}
+      </main>
+    </view>
   </view>
 </template>
 
 <script>
 export default {
-  methods:{
+  data() {
+    return {
+      title: "标题",
+    };
+  },
+  methods: {
     goBaidu() {
-      location.href = 'http://baidu.com'
-    }
-  }
-}
+      location.href = "http://baidu.com";
+    },
+  },
+  onLoad() {
+    console.log(uni.getSystemInfoSync().statusBarHeight);
+  },
+};
 </script>
 
 <style>
-#content header{
+#content header {
   font-size: 28rpx;
   text-align: center;
   background: #bbb;
@@ -34,16 +42,16 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-#content header .goback{
+#content header .goback {
   width: 60rpx;
   text-align: center;
 }
-#content header .center{
+#content header .center {
   position: absolute;
   width: 100%;
   text-align: center;
 }
-#content header .main{
+#content header .main {
   width: 100rpx;
   text-align: center;
 }
